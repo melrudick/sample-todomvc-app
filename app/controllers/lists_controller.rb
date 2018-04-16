@@ -2,7 +2,9 @@ class ListsController < ApplicationController
 
   def index
     @list = List.new
+    # makes instance available in homepage
     @lists = List.all
+    # lists all lists
   end
 
   def show
@@ -11,7 +13,6 @@ class ListsController < ApplicationController
 
   def create
     @list = List.new(list_params)
-    @list.name =
     @list.save
     redirect_to list_path(@list)
   end
