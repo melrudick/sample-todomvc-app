@@ -1,0 +1,30 @@
+<section class="todoapp">
+
+  <header class="header">
+    <h1>TODO Lists</h1>
+    <%= form_for(@list) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.submit "Create" %>
+    <% end %>
+    <!-- <input class="new-todo" placeholder="What needs to be done?" autofocus=""> -->
+  </header>
+
+  <section class="main">
+    <input class="toggle-all" type="checkbox">
+    <label for="toggle-all">Mark all as complete</label>
+    <ul class="todo-list">
+      <% @lists.each do |list| %>
+      <li>
+        <div class="view">
+          <label><%= link_to list.name, list_path(list) %></label>
+        </div>
+      </li>
+
+    <% end %>
+    </ul>
+  </section>
+
+  <footer class="footer" >
+  </footer>
+</section>

@@ -2,7 +2,8 @@
 
 2. Allow user to CRUD lists and items
 create list
-see lists
+-ListsController shows whole list and presents user with form
+
 show list
 
 lists has_many items
