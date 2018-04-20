@@ -3,10 +3,11 @@
   <header class="header">
     <h1>TODO Lists</h1>
     <%= form_for(@list) do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-    <%= f.submit "Create" %>
+
+    <%= f.text_field :name, :class => "new-todo", :placeholder => (@list.errors.full_messages_for(:name).first || "Enter a new list..") %>
+    <%= f.submit :style => "display: none" %>
     <% end %>
+  </form>
     <!-- <input class="new-todo" placeholder="What needs to be done?" autofocus=""> -->
   </header>
 

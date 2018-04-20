@@ -22,3 +22,16 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+Crags -yosemite
+  -apron, cookie,
+    -comments(crag_id, user_id), -flags (lots of falling rock)
+#CragFlags
+
+  Location -arizona, austria, california
+   -crag belongs_to location (separate model)
+
+   User -comments(join table)
+
+
+  crags (location, comments, grades)

@@ -1,0 +1,16 @@
+<section class="todoapp">
+
+  <header class="header">
+    <h1>Sign Up</h1>
+    <%= form_for(@user) do |f| %>
+    <%= f.text_field :email, class: "new-todo", placeholder: "email goes here" %>
+    <%= f.submit %>
+    <% end %>
+    <!-- <input class="new-todo" placeholder="What needs to be done?" autofocus=""> -->
+  </header>
+
+
+
+  <footer class="footer" >
+  </footer>
+</section>

@@ -1,6 +1,7 @@
 class ListsController < ApplicationController
 
   def index
+    # if you're not logged in, you can't see this
     @list = List.new
     # makes instance available in homepage
     @lists = List.all
@@ -9,12 +10,17 @@ class ListsController < ApplicationController
 
   def show
     @list = List.find(params[:id])
+    @item = Item.new
   end
 
   def create
     @list = List.new(list_params)
-    @list.save
-    redirect_to list_path(@list)
+    if @list.save
+      redirect_to list_path(@list)
+    else
+      @lists = List.all
+      render :index
+    end
   end
 
   private
