@@ -5,9 +5,9 @@
     <%= form_for(@list) do |f| %>
 
     <%= f.text_field :name, :class => "new-todo", :placeholder => (@list.errors.full_messages_for(:name).first || "Enter a new list..") %>
-    <%= f.submit :style => "display: none" %>
+    <%= f.submit %>
     <% end %>
-  </form>
+
     <!-- <input class="new-todo" placeholder="What needs to be done?" autofocus=""> -->
   </header>
 
@@ -27,5 +27,11 @@
   </section>
 
   <footer class="footer" >
+
   </footer>
 </section>
+<footer>
+  
+  <p><%= link_to "Logout", logout_path %></p>
+
+</footer>

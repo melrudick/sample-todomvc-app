@@ -8,7 +8,7 @@ class ItemsController < ApplicationController
       render "lists/show"
     end
   end
-
+    # /list/:id
     def update
       # what item am i trying to update?
       @item = Item.find(params[:id])
