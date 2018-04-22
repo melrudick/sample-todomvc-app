@@ -4,7 +4,8 @@
     <h1>Login</h1>
   <%= form_tag(sessions_path) do %>
   <%= text_field_tag :email, '', class: "new-todo", placeholder: "Login with email" %>
-    <!-- <input class="new-todo" placeholder="What needs to be done?" autofocus=""> -->
+  <%= text_field_tag :password, '', class: "new-todo", placeholder: "and password" %>
+  <%= submit_tag "login" %>
   <% end %>
   </header>
 
