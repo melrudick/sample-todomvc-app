@@ -10,6 +10,7 @@ class ItemsController < ApplicationController
   end
     # /list/:id
     def update
+      
       # what item am i trying to update?
       @item = Item.find(params[:id])
       @item.update(item_params)
